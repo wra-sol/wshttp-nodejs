@@ -2,9 +2,12 @@
   "name": "http-nodejs",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Aiden Bai",
+  "author": "NJA",
   "license": "MIT",
   "scripts": {
     "start": "node server.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
   }
 }
