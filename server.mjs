@@ -1,10 +1,10 @@
-import https from 'https';
+import {createServer} from 'http';
 import { WebSocketServer } from 'ws';
 import express from 'express'
 
 const app = express();
 
-const server = https.createServer(app);
+const server = createServer(app);
 
 const wss = new WebSocketServer({ server });
 wss.on('connection', function connection(ws) {
