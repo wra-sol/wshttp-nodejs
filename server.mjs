@@ -5,7 +5,7 @@ import express from 'express'
 const app = express();
 
 const server = createServer(app);
-const PORT = $PORT || process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const wss = new WebSocketServer({ server });
 wss.on('connection', function connection(ws) {
   console.log('Secure client connected');
