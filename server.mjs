@@ -5,7 +5,7 @@ import express from 'express'
 const app = express();
 
 const server = createServer(app);
-
+const PORT = $PORT || process.env.PORT || 3000;
 const wss = new WebSocketServer({ server });
 wss.on('connection', function connection(ws) {
   console.log('Secure client connected');
@@ -20,4 +20,6 @@ app.get('/', (req, res) => {
   res.send('Hello world!');
 })
 
-server.listen(process.env.PORT);
+server.listen(PORT, () => {
+  console.log(`Server is listening on ${PORT}`)
+});
